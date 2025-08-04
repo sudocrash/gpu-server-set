@@ -64,11 +64,12 @@ sudo apt install openssh-server
 ### 6) 아래 명령어를 입력해 ssh가 실행중인지 확인합니다
 sudo systemctl status ssh
 
-0.3. 컴퓨터에서 putty로 접속
-1) putty에서 10.191.65.XXX로 접속합니다.
-2) 아이디, 비번 입력 후 아래 명령어를 실행한 뒤 proxmox상에서 VM이 꺼지는지 확인합니다.
+## 0.3. 컴퓨터에서 putty로 접속
+### 1) putty에서 10.191.65.XXX로 접속합니다.
+### 2) 아이디, 비번 입력 후 아래 명령어를 실행한 뒤 proxmox상에서 VM이 꺼지는지 확인합니다.
+```bash
 sudo poweroff
-
+```
 ____________________
 
 # 1. (node) shell GPU passtrough 작업
