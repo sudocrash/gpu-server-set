@@ -58,11 +58,15 @@ DNS: 8.8.8.8
 ### 4) 네트워크에 연결되었는지 확인합니다.
 
 ### 5) 터미널을 켜고 아래 명령어를 입력합니다.
+```bash
 sudo apt update
 sudo apt install openssh-server
+```
 
 ### 6) 아래 명령어를 입력해 ssh가 실행중인지 확인합니다
+```bash
 sudo systemctl status ssh
+```
 
 ## 0.3. 컴퓨터에서 putty로 접속
 ### 1) putty에서 10.191.65.XXX로 접속합니다.
@@ -102,7 +106,7 @@ update-initramfs -u -k all
 echo 1 > /sys/bus/pci/devices/0000:2d:00.0/remove
 echo 1 > /sys/bus/pci/rescan
 ```
-## 6) nano /root/fix_gpu_pass.sh 실행 후 다음을 아래에 두 줄을 추가합니다.
+## 6) `nano /root/fix_gpu_pass.sh` 실행 후 다음을 아래에 두 줄을 추가합니다.
 ```bash
 echo 1 > /sys/bus/pci/devices/0000:2d:00.0/remove
 echo 1 > /sys/bus/pci/rescan
@@ -113,18 +117,18 @@ echo 1 > /sys/bus/pci/rescan
 chmod +x /root/fix_gpu_pass.sh
 ```
 
-## 8) crontab -e 실행 후 다음과 다음을 맨 아래에 추가합니다.
+## 8) `crontab -e` 실행 후 다음과 다음을 맨 아래에 추가합니다.
 ```bash
 @reboot /root/fix_gpu_pass.sh
 ```
-## 9) nano /etc/pve/qemu-server/XXX.conf 실행 후(VM ID에 따라 XXX를 수정) 다음을 추가합니다.
+## 9) `nano /etc/pve/qemu-server/XXX.conf` 실행 후(VM ID에 따라 XXX를 수정) 다음을 추가합니다.
 ```bash
 cpu: host,hidden=1
 hostpci0: 2d:00.0,pcie=1,x-vga=1
 hostpci1: 2d:00.1
 ```
 
-## 10) reboot 합니다.
+## 10) `reboot` 합니다.
 
 ____________________
 
