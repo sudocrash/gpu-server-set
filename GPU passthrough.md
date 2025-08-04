@@ -16,7 +16,7 @@
 - machine: q35 # 반드시 이렇게 설정합니다!
 - BIOS: OVMF(UEFI) # 반드시 이렇게 설정합니다!
 - EFI Storage: Hynix-P31
-ㄴ Pre-Enroll keys 옵션을 체크 해제합니다***
+- **Pre-Enroll keys 옵션을 체크 해제합니다**
 * 보안부팅을 해제하는 옵션으로 반드시 이렇게 설정하도록 합니다!
 * VM 생성 후 hardware나 .conf에서
 `efidisk0: Hynix-P31:vm-999-disk-0,efitype=4m,size=4M`
