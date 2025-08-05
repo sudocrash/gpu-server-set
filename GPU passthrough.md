@@ -19,8 +19,9 @@
 - **Pre-Enroll keys 옵션을 체크 해제합니다**
 * 보안부팅을 해제하는 옵션으로 반드시 이렇게 설정하도록 합니다!
 * VM 생성 후 hardware나 .conf에서
-`efidisk0: Hynix-P31:vm-999-disk-0,efitype=4m,size=4M`
+`efidisk0: Hynix-P31:vm-XXX-disk-0,efitype=4m,size=4M`
 위와 같이 설정이 되었는지 다시 한 번 확인합니다. 절대로 Pre-Enroll keys와 관련된 변수가 존재해서는 안됩니다!
+* XXX는 VM ID입니다.
 * 보안 부팅을 해제함으로써 이후 NVIDIA 드라이버 설치시 MOK 활성화를 우회하게 됩니다. 따라서 반드시 해당 설정이 올바르게 이루어졌는지 확인할 수 있도록 합니다!
 
 ### 4) (Disks)
