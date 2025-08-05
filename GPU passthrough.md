@@ -11,11 +11,11 @@
 - Type; Linux
 - Version: 6.x - 2.6 Kernel
 
-### 3) (System) --> 매우 중요합니다!!!
+### **3) (System)** --> 매우 중요합니다!!!
 - Graphic card: Default
-- machine: q35 # 반드시 이렇게 설정합니다!
-- BIOS: OVMF(UEFI) # 반드시 이렇게 설정합니다!
-- EFI Storage: Hynix-P31
+- **machine: q35**
+- **BIOS: OVMF(UEFI)**
+- **EFI Storage: Hynix-P31**
 - **Pre-Enroll keys 옵션을 체크 해제합니다**
 * 보안부팅을 해제하는 옵션으로 반드시 이렇게 설정하도록 합니다!
 * VM 생성 후 hardware나 .conf에서
@@ -50,10 +50,10 @@
 
 ### 3) 부팅한 후 다음과 같이 네트워크를 설정합니다.
 (IPv4 - Manual)
-Address: 10.191.65.XXX
-netmask: 255.255.248.0
-Gateway: 10.191.64.1
-DNS: 8.8.8.8
+- Address: 10.191.65.XXX
+- netmask: 255.255.248.0
+- Gateway: 10.191.64.1
+- DNS: 8.8.8.8
 
 ### 4) 네트워크에 연결되었는지 확인합니다.
 
